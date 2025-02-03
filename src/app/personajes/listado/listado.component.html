@@ -1,0 +1,33 @@
+<h1> Listado de Personajes </h1>
+
+<!-- Forma tradicional
+<ul class="mt-2 list-group">
+  <li class="list-group-item">Caricatura 1</li>
+  <li class="list-group-item">Caricatura 2</li>
+  <li class="list-group-item">Caricatura 3</li>
+</ul>
+-->
+
+<div *ngIf="eliminaCari;else noseCumple">
+<h3>Caricatura eliminada <small class="text-danger">{{eliminaCari}}</small></h3>
+</div>
+
+<ng-template #noseCumple>  <!--# significa referencia local-->
+  <h3>No se ha eliminado nada</h3>
+</ng-template> <!--No es un elemento HTML-->
+
+
+<button
+*ngIf="nombresCaricaturas.length>0"
+(click)="eliminarCaricatura()"
+ class="btn btn-outline-danger">
+ Eliminar última caricatura
+</button>
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let nombre of nombresCaricaturas"
+  class="list-group-item">
+  {{ nombre }}
+</li>
+
+</ul>
