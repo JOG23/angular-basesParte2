@@ -1,4 +1,5 @@
 
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,11 +11,17 @@ import { ListadoComponent } from './personajes/listado/listado.component';
 import { ContadorModulo } from './contador/contador.modulo';
 import { PersonajeModulo } from './personajes/personaje.modulo';
 
+import { Personaje1Module } from './personaje1/personaje1.module';
+import { Prueba1Component } from './Goals/prueba1/prueba1.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
    // PersonajeComponent,
    ListadoComponent,
+   Prueba1Component,
+
 
   ],
   imports: [
@@ -22,6 +29,8 @@ import { PersonajeModulo } from './personajes/personaje.modulo';
     AppRoutingModule,
     ContadorModulo,
     PersonajeModulo,
+    Personaje1Module,
+
 
 
 
