@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './listado.component.html',
   styleUrl: './listado.component.css'
 })
+
+
 export class ListadoComponent {
 
 public nombresCaricaturas:string[]=['Caricatura 1', 'Caricatura2', 'Caricatura3'];
